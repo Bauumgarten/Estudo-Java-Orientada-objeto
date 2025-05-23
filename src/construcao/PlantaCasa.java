@@ -1,14 +1,4 @@
 public class PlantaCasa implements Construcao {
-    @Override
-    public void pintar(String cor) {
-
-    }
-
-    @Override
-    public int calcularCustoConstrucao(int metroQuadrado) {
-        return 0;
-    }
-
 
     int metragem = 300;
     int numeroDeQuartos = 3;
@@ -17,7 +7,15 @@ public class PlantaCasa implements Construcao {
     String cor = "Cinza";
     String material = "Alvenaria";
 
+    @Override
+    public void pintar(String cor) {
+        System.out.println("Pintando a casa de " + cor);
+    }
 
+    @Override
+    public int calcularCustoConstrucao(int metroQuadrado) {
+        return metragem + metroQuadrado;
+    }
 
     public void construir() {
         System.out.println("A casa foi construída com sucesso!");
